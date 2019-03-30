@@ -28,7 +28,6 @@ endif
 endif
 endif
 
-
 # Install all necessary dependencies.
 deps: $(distro_deps)
 
@@ -104,7 +103,7 @@ sudo_install:
 verify:
 	go run ./cmd/version/main.go
 
-# Runs tests.
+# Runs tests. ss
 # This assumes env.sh was already sourced.
 # pvt is not tested here since it requires additional depenedences.
 test:
