@@ -44,13 +44,11 @@ deps_debian:
 
 # Download OpenCV source tarballs.
 download:
-	rm -rf $(TMP_DIR)opencv
-	mkdir $(TMP_DIR)opencv
-	cd $(TMP_DIR)opencv
+	cd $(TMP_DIR)
+	git clone https://github.com/zhangjin4415/opencv.git
+	unzip -q opencv_contrib.zip
 	curl -Lo opencv.zip https://github.com/opencv/opencv/archive/$(OPENCV_VERSION).zip
 	unzip -q opencv.zip
-	curl -Lo opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/$(OPENCV_VERSION).zip
-	unzip -q opencv_contrib.zip
 	rm opencv.zip opencv_contrib.zip
 	cd -
 
