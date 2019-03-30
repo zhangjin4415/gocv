@@ -46,6 +46,7 @@ deps_debian:
 download:
 	cd $(TMP_DIR)
 	git clone https://github.com/zhangjin4415/opencv.git
+	cd $(TMP_DIR)opencv
 	unzip -q opencv_contrib.zip
 	curl -Lo opencv.zip https://github.com/opencv/opencv/archive/$(OPENCV_VERSION).zip
 	unzip -q opencv.zip
